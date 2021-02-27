@@ -20,6 +20,7 @@ public class Main {
 		zoo.adaugareAnimal(g2);
 		
 		zoo.feedAnimals();
+		zoo.mutareAnimale();
 
 	}
 

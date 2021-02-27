@@ -42,4 +42,10 @@ public class Zoo {
 		}
 	}
 	
+	public void mutareAnimale() {
+		for(Animal a: animale) {
+			a.merge();
+		}
+	}
+	
 }
