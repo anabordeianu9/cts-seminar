@@ -34,8 +34,11 @@ public class Student extends Aplicant {
 	}
 	@Override
 	public String toString() {
-		return "Student: Nume=" + nume + ", Prenume=" + prenume + ", Varsta=" + varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nr_proiecte +  ", DenumireProiect=" + Arrays.toString(denumireProiect) + "Facultate=" + facultate + ", An_studii=" + an_studii ;
-	}
+		StringBuilder stringBuilder = new StringBuilder("Student: ");
+		stringBuilder.append(super.toString())
+		.append(" An studii ").append(this.an_studii)
+		.append(" Facultate ").append(this.facultate);
+		return stringBuilder.toString();	}
 	
 	
 	public void afisareSumaFinantata() {
