@@ -16,15 +16,22 @@ public class Program {
 		return listaAplicanti;
 	}
 	
+	public static void afiseazaAplicanti(List<Aplicant> listaAplicanti) {
+		Proiect proiect = new Proiect(81);
+		
+		for(Aplicant aplicant:listaAplicanti) {
+			System.out.println(aplicant.toString());
+			aplicant.afisareSumaFinantata();
+			aplicant.afiseazaStatusPeProiect(proiect);
+		}
+	}
+	
 
 	public static void main(String[] args) {
 		List<Aplicant> listaAplicanti;
 		try {
 			listaAplicanti = citesteAplicanti(new ReaderAngajat("angajati.txt"));
-			for(Aplicant aplicant:listaAplicanti) {
-				System.out.println(aplicant.toString());
-				aplicant.afisareSumaFinantata();
-			}
+			afiseazaAplicanti(listaAplicanti);
 				
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
