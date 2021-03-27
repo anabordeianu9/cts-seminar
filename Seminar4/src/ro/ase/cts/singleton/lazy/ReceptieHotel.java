@@ -8,7 +8,7 @@ public class ReceptieHotel {
 	private static ReceptieHotel instanta = null;
 	
 	//trebuie sa avem constructorii privati - clasa singleton
-	private ReceptieHotel(String numeReceptioner, int etaj, String numeHotel) {
+	public ReceptieHotel(String numeReceptioner, int etaj, String numeHotel) {
 		super();
 		this.numeReceptioner = numeReceptioner;
 		this.etaj = etaj;
