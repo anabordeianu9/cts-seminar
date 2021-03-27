@@ -1,4 +1,4 @@
-package ro.ase.cts.factory;
+package ro.ase.cts.simplefactory;
 
 public class Atacant extends Jucator{
 	public Atacant(String numeJucator) {

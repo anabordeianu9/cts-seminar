@@ -1,19 +1,17 @@
-package ro.ase.cts.factory;
+package ro.ase.cts.simplefactory;
 
-public class Portar extends Jucator{
-	
-	public Portar(String numeJucator) {
+public class Fundas extends Jucator{
+	public Fundas(String numeJucator) {
 		super(numeJucator);
 	}
 
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Portar nume = ");
+		builder.append("Fundas nume = ");
 		builder.append(super.toString());
 		return builder.toString();
 	}
 	
 	
-
 }

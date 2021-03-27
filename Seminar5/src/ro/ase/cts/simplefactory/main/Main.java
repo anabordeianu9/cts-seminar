@@ -1,11 +1,10 @@
-package ro.ase.cts.factory.main;
+package ro.ase.cts.simplefactory.main;
 
-import ro.ase.cts.factory.Factory;
-import ro.ase.cts.factory.Jucator;
-import ro.ase.cts.factory.Portar;
-import ro.ase.cts.factory.TipJucator;
-import ro.ase.cts.factory.Fundas;
-import ro.ase.cts.factory.Atacant;
+import ro.ase.cts.simplefactory.Factory;
+import ro.ase.cts.simplefactory.Fundas;
+import ro.ase.cts.simplefactory.Jucator;
+import ro.ase.cts.simplefactory.Portar;
+import ro.ase.cts.simplefactory.TipJucator;
 
 public class Main {
 

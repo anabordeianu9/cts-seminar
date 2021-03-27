@@ -1,4 +1,4 @@
-package ro.ase.cts.factory;
+package ro.ase.cts.simplefactory;
 
 public abstract class Jucator {
 	private String numeJucator;
