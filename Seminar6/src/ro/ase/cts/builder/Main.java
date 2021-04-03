@@ -20,6 +20,14 @@ public class Main {
 		
 		System.out.println(r4.toString());
 		System.out.println(r5.toString());
+		
+		RezervareBuilder2 builder2 = new RezervareBuilder2();
+		builder2.setAreMancareInclusa(true).setAreBauturaInclusa(true).setAreScaunErgonomic(true);
+		Rezervare r6 = builder2.setCodRezervare(678).build();
+		Rezervare r7 = builder2.setCodRezervare(789).build();
+		
+		System.out.println(r6.toString());
+		System.out.println(r7.toString());
 
 	}
 
