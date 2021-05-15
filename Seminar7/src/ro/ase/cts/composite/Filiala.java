@@ -24,7 +24,7 @@ public class Filiala implements Sediu{
 	}
 
 	@Override
-	public void getSediu(int pozitie) throws Exception {
+	public Sediu getSediu(int pozitie) throws Exception {
 		throw new Exception();
 	}
 
