@@ -3,7 +3,9 @@ package ro.ase.cts.teste;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
+import ro.ase.cts.categoriiteste.TesteUrgente;
 import ro.ase.cts.clase.Grupa;
 import ro.ase.cts.mocks.StudentDummy;
 import ro.ase.cts.mocks.StudentFake;
@@ -11,6 +13,7 @@ import ro.ase.cts.mocks.StudentStub;
 
 public class TestGrupaWithMocks {
 
+	@Category(TesteUrgente.class)
 	@Test
 	public void testAdaugareStudent() {
 		StudentDummy student = new StudentDummy();

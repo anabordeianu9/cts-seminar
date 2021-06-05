@@ -3,7 +3,10 @@ package ro.ase.cts.teste;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
+import ro.ase.cts.categoriiteste.TesteGetPromovabilitate;
+import ro.ase.cts.categoriiteste.TesteUrgente;
 import ro.ase.cts.clase.Grupa;
 import ro.ase.cts.clase.Student;
 
@@ -15,12 +18,14 @@ public class TestGrupa {
 		assertEquals(1078,grupa.getNrGrupa());
 	}
 	
+	@Category(TesteUrgente.class)
 	@Test
 	public void testConstructorBoundaryLimitaInferioara() {
 		Grupa grupa = new Grupa(1000);
 		assertEquals(1000,grupa.getNrGrupa());
 	}
 	
+	@Category(TesteUrgente.class)
 	@Test
 	public void testConstructorBoundaryLimitaSuperioara() {
 		Grupa grupa = new Grupa(1100);
@@ -47,7 +52,7 @@ public class TestGrupa {
 		Grupa grupa = new Grupa(1000);
 		assertNotNull(grupa.getStudenti());
 	}
-	
+	@Category(TesteGetPromovabilitate.class)
 	@Test
 	public void testGetPromovabilitateRight() {
 		Grupa grupa = new Grupa(1078);
@@ -64,6 +69,7 @@ public class TestGrupa {
 		assertEquals(0.8, grupa.getPromovabilitate(), 0.001);
 	}
 	
+	@Category(TesteGetPromovabilitate.class)
 	@Test
 	public void testGetPromovabilitateLimitaSuperioara() {
 		Grupa grupa = new Grupa(1078);
@@ -75,6 +81,7 @@ public class TestGrupa {
 		assertEquals(1, grupa.getPromovabilitate(), 0.001);
 	}
 	
+	@Category(TesteGetPromovabilitate.class)
 	@Test
 	public void testGetPromovabilitateLimitaInferioara() {
 		Grupa grupa = new Grupa(1078);
@@ -86,6 +93,7 @@ public class TestGrupa {
 		assertEquals(0, grupa.getPromovabilitate(), 0.001);
 	}
 	
+	@Category(TesteGetPromovabilitate.class)
 	@Test
 	public void testGetPromovabilitateInverse() {
 		int nrIntegralisti = 31;
@@ -106,12 +114,14 @@ public class TestGrupa {
 		assertEquals(nrIntegralisti, grupa.getPromovabilitate() * grupa.getStudenti().size(), 0.001);
 	}
 	
+	@Category(TesteGetPromovabilitate.class)
 	@Test
 	public void testGetPromovabilitateError() {
 		Grupa grupa = new Grupa(1078);
 		assertEquals(0, grupa.getPromovabilitate(), 0.001);
 	}
 	
+	@Category(TesteGetPromovabilitate.class)
 	@Test
 	public void testGetPromovabilitateCardinalityAreRestanta() {
 		Grupa grupa = new Grupa(1078);
@@ -121,6 +131,7 @@ public class TestGrupa {
 		assertEquals(0, grupa.getPromovabilitate(), 0.001);
 	}
 	
+	@Category(TesteGetPromovabilitate.class)
 	@Test
 	public void testGetPromovabilitateCardinalityNuAreRestanta() {
 		Grupa grupa = new Grupa(1078);
